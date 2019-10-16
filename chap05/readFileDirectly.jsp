@@ -1,14 +1,10 @@
-package webapps.chap03;
+<%@ page contentType= "text/html; charset=utf-8"%>
+<%@ page import="java.io.*"%>
 
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URLEncoder;
-import java.sql.Struct;
-import java.util.Enumeration;
-
-
-public class test{
-    public static void main(String[] args) {
+<html>
+<head><title>read file using absolute path</title></head>
+<body>
+   <%
         char[] buff = new char[128];
         int len = -1;
         String filePath = "/var/lib/tomcat8/webapps/chap05/message/notice.txt";
@@ -22,5 +18,6 @@ public class test{
             //TODO: handle exception
             out.println("exception"+ex.getMessage());
         }
-    }
-}
+   %>
+</body>
+</html>
