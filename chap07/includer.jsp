@@ -6,7 +6,7 @@
         int number = 10;
     %>
 
-    <%@ include file="/includee.jsp"%>
+    <%@ include file="/includee.jspf"%>
 
     공통변수 DATAFOLDER = <%= dataFolder%>
 </body>
