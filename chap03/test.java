@@ -9,6 +9,10 @@ import java.util.Enumeration;
 
 public class test{
     public static void main(String[] args) {
-        System.out.println("Hello vscode");
+        Enumeration<String> attrEnum = application.getAttributeNames();
+        while (attrEnum.hasMoreElements()) {
+            String name = attrEnum.nextElement();
+            Object value = application.getAttribute(name);
+        }
     }
 }`
