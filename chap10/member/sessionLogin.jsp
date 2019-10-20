@@ -19,6 +19,6 @@ Success to login
 alert("Fail to login");
 history.go(-1);
 </script>
-<%
+<%dud
     }
 %>
