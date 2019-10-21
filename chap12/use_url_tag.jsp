@@ -5,7 +5,7 @@
 <head><title>url tag</title></head>
 <body>
 <c:url value="http://search.daum.net/search" var="searchUrl">
-    <c:param name="w" value="blog"/>
+    <c:param name="w" value="tot"/>
     <c:param name="q" value="공원"/>
 </c:url>
 <c:redirect url="http://search.daum.net/search">
