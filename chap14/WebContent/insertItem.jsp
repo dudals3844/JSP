@@ -1,25 +1,7 @@
-package webapps.chap03;
-
-import java.io.FileReader;
-import java.io.IOException;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.text.SimpleDateFormat;
-import java.util.HashMap;
-
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-
-import com.mysql.cj.xdevapi.Result;
-import com.mysql.cj.xdevapi.Statement;
-
-public class test{
-    public static void main(String[] args) {
-        String idValue = request.getParameter("id");
+<%@ page contentType = "text/html; charset=utf-8" %>
+<%@ page import="java.sql.*"%>
+<%
+    String idValue = request.getParameter("id");
 
         Connection conn = null;
         PreparedStatement pstmtItem = null;
@@ -84,5 +66,14 @@ public class test{
                 }
             }
         }
-    }
-}
+%>
+<html>
+<head><title>Input the Item</title></head>
+<body>
+<% if(occuredException != null){%>
+error
+<%}else{%>
+success to input data
+<%}%>
+</body>
+</html>
